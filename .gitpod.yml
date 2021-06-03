@@ -1,0 +1,37 @@
+image: gitpod/workspace-full
+
+tasks:
+  - command: sudo docker-up
+    name: Docker daemon
+  - command: docker
+  - command: python3 -m pip install --upgrade pip
+  - command: pip3 install numpy matplotlib pandas numba
+  - command: pip install streamlit
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addComment: true
+
+vscode:
+  extensions:
+    - ms-python.python
+    - GitHub.vscode-pull-request-github
+    - eamodio.gitlens
+    - CoenraadS.bracket-pair-colorizer-2
+    - aliariff.auto-add-brackets
+    - phplasma.csv-to-table
+    - jamesmaj.easy-icons
+    - oderwat.indent-rainbow
+    - bierner.markdown-preview-github-styles
+    - davidanson.vscode-markdownlint
+    - whizkydee.material-palenight-theme
+    - christian-kohler.path-intellisense
+    - njpwerner.autodocstring
+    - kevinrose.vsc-python-indent
+    - isualstudioexptteam.vscodeintellicode
+    - sourcery.sourcery
