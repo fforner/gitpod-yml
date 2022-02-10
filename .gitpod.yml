@@ -3,14 +3,18 @@ image: gitpod/workspace-full
 tasks:
   - command: sudo docker-up
     name: Docker daemon
+    
   - command: docker
   - command: python3 -m pip install --upgrade pip
   - command: pip3 install numpy matplotlib pandas numba
   - command: pip install streamlit
 
 github:
+
   prebuilds:
+  
     master: true
+    
     branches: true
     pullRequests: true
     pullRequestsFromForks: true
@@ -32,6 +36,7 @@ vscode:
     - whizkydee.material-palenight-theme
     - christian-kohler.path-intellisense
     - njpwerner.autodocstring
+    
     - kevinrose.vsc-python-indent
     - isualstudioexptteam.vscodeintellicode
     - sourcery.sourcery
